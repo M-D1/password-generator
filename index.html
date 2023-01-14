@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="index.css">
+        
+    </head>
+    <body>
+        <div class="span-container">
+            <span id="span" class="dark" ></span>
+        </div>
+        
+        <div class="content-container">
+            <h1 class="title"><span class="color" >Generate a </span><span class="green">random password</span></h1>
+            <p  class="desc color">Never use an insecure password again.</p>
+            <div class="input-length">
+                <label class="color" for="number">Length:</label>
+                <input
+                    type="number"
+                    class="input-number"
+                    title="password length"
+                    id="number" 
+                />
+            </div>
+            
+            <label class="color" for="numbers">Numbers:</label>
+            <input
+                type="checkbox"
+                id="numbers"
+            >
+            
+            <label class="color symbol" for="symbols">Symbols</label>
+            <input
+                type="checkbox"
+                id="symbols"
+            >
+            <button id="btn" class="btn">Generate passwords</button>
+            <hr/>
+            <div class="flex">
+                <div class="passwords">
+                    <p id="passOne" class="random-pass green"></p>
+                </div>
+                <div class="passwords">
+                    <p id="passTwo" class="random-pass green"></p>
+                </div>
+            </div>
+        </div>
+      <script type="module" src="index.js"></script>
+    </body>
+</html>
