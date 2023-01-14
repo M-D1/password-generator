@@ -1,5 +1,5 @@
 // javascript
-function themes(){
+function theme(){
 const spanContainr = document.querySelector('.span-container');
 const span = document.querySelector('#span')
 const body = document.body
@@ -41,4 +41,4 @@ spanContainr.addEventListener('click',function(){
 })
 }
 
-export default themes 
+export default theme

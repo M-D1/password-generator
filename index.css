@@ -99,7 +99,21 @@ body{
     padding:  .4em 3em;
     margin: 1em;
     border-radius: 6px;
+    position: relative;
     
+}
+.passwords:hover{
+    cursor: pointer;
+
+}
+.passwords:hover::after{
+    content: 'copy to clipboard';
+    position: absolute;
+    left: 10%;
+    margin-top: .6em;
+    text-align: center;
+    color: #10B981;
+    font-size: 1em;
 }
 
 

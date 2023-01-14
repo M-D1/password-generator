@@ -1,4 +1,4 @@
-import theme from './theme'
+import theme from './theme.js'
 theme()
 
 
@@ -16,6 +16,23 @@ const input = document.querySelector('.input-number')
 
 const passOne = document.getElementById('passOne')
 const passTwo = document.getElementById('passTwo')
+
+const passWordOneContainer = document.querySelector('#passWordOne')
+
+const passWordTwoContainer = document.querySelector('#passWordTwo')
+
+async function copyText(element){
+    const text = element.textContent
+     
+   await navigator.clipboard.writeText(text)
+    alert('Text copied')
+   
+}
+
+
+
+passWordOneContainer.addEventListener('click', () => copyText(passOne))
+passWordTwoContainer.addEventListener('click', () => copyText(passTwo))
 
 
 // creating a function that loops over the symbols/numbers arrays
@@ -88,8 +105,6 @@ function generatePassWord(value){
 }
 
 
-btn.addEventListener('click',function(){
-    generatePassWord(input.value)
-})
+btn.addEventListener('click',() => generatePassWord(input.value))
 
 
